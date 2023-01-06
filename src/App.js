@@ -51,9 +51,9 @@ function App() {
               <h2>Top Experts</h2>
 
               {
-                ['Psuedo Near Expert', 'Near Expert', 'Bitcoin Maxi', 'Ethereum Maxi'].map(name => {
+                ['Psuedo Near Expert', 'Near Expert', 'Bitcoin Maxi', 'Ethereum Maxi'].map((name, index) => {
                   return (
-                    <div className='user'>
+                    <div className='user' key={index}>
                       <img className='user-avatar' src={avatar} width="50" height="50"></img>
                       <div className='user-info'>
                         <span className="user-name">{name}</span>
