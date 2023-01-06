@@ -1,0 +1,50 @@
+.Sidebar {
+  text-align: left;
+  width: 30%;
+}
+
+.card {
+  background: #fff;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card p {
+  display: flex;
+}
+
+.card-icon {
+  margin-right: 10px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-avatar {
+  margin-right: 10px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.user-stats {
+  display: flex;
+}
+
+.user-stats img {
+  margin-right: 6px;
+  margin-left: 3px;
+}
