@@ -1,10 +1,11 @@
 import Card from '../components/Card';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCreateQuestionMutation } from "../reducers/questionsApi";
 import './NewQuestionRoute.css';
 
 export default function NewQuestionRoute() {
   const [createPost] = useCreateQuestionMutation();
+  const navigate = useNavigate();
 
   const onSubmit = (e) => {
     console.log(e.target.elements)
@@ -14,7 +15,8 @@ export default function NewQuestionRoute() {
       title_text: title.value,
       question_text: body.value,
     }
-    createPost(formData);
+    createPost(formData)
+      .then(() => navigate('/'));
   }
 
   return (
@@ -29,8 +31,8 @@ export default function NewQuestionRoute() {
       <form onSubmit={onSubmit}>
         <input type="text" name="title" placeholder="Enter the question title" required />
         <textarea name="body" placeholder="Write your question here" rows="15" required />
-        <div class="NewQuestionRoute-buttons">
-          <input type="submit" class="button"/>
+        <div className="NewQuestionRoute-buttons">
+          <input type="submit" className="button"/>
         </div>
       </form>
     </Card>
