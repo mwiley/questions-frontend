@@ -59,3 +59,14 @@ body {
   box-sizing: border-box;
   padding-right: 20px;
 }
+
+@media(max-width: 960px) {
+  .App-body {
+    flex-direction: column;
+  }
+
+  .App-page {
+    width: 100%;
+    padding-right: 0;
+  }
+}

@@ -39,3 +39,9 @@
   margin-right: 6px;
   margin-left: 3px;
 }
+
+@media(max-width: 960px) {
+  .Sidebar {
+    width: 100%;
+  }
+}
