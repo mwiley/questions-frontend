@@ -1,3 +1,4 @@
+import Card from './Card';
 import usersIcon from '../images/users-solid.svg';
 import questionsIcon from '../images/comment-solid.svg';
 import upvotesIcon from '../images/circle-up-solid.svg';
@@ -7,7 +8,7 @@ import './Sidebar.css';
 
 const Sidebar = () => (
     <div className="Sidebar">
-      <div className="card">
+      <Card className="Sidebar-card">
         <h2>About</h2>
         <p>
           <img src={usersIcon} alt="" className="card-icon" width="25"></img>
@@ -25,21 +26,21 @@ const Sidebar = () => (
           <img src={tokensIcon} alt="" className="card-icon" width="25"></img>
           145 Tokens Awarded
         </p>
-      </div>
+      </Card>
 
-      <div className="card">
+      <Card>
         <h2>Top Experts</h2>
 
         {
           ['Psuedo Near Expert', 'Near Expert', 'Bitcoin Maxi', 'Ethereum Maxi'].map((name, index) => {
             return (
               <div className='user' key={index}>
-                <img className='user-avatar' alt={`${name}'s avatar`} src={avatar} width="50" height="50"></img>
+                <img className='user-avatar' alt={`${name}'s avatar`} src={avatar} width="50" height="50"/>
                 <div className='user-info'>
                   <span className="user-name">{name}</span>
                   <span className="user-stats"> 
                     47
-                    <img src={upvotesIcon} alt="upvotes" width={15}></img>
+                    <img src={upvotesIcon} alt="upvotes" width={15}/>
                     collected
                   </span>
                 </div>
@@ -47,7 +48,7 @@ const Sidebar = () => (
             )
           })
         }
-      </div>
+      </Card>
     </div>
 )
 

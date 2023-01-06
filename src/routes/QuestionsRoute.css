@@ -1,0 +1,33 @@
+.question-title {
+  font-weight: bold;
+}
+
+.question-row {
+  padding-bottom: 20px;
+}
+
+.question-row hr {
+  border-top: 1px solid #c9c9c9;
+}
+
+.question-user-label {
+  font-weight: bold;
+}
+
+.question-user {
+  display: flex;
+  align-items: center;
+}
+
+.question-user-avatar {
+  margin-right: 10px;
+}
+
+.question-user-name {
+  font-weight: bold;
+}
+
+.question-user-info {
+  display: flex;
+  flex-direction: column;
+}
