@@ -6,6 +6,23 @@ import tokensIcon from './images/coins-solid.svg';
 import avatar from './images/avatar.png';
 import './App.css';
 
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <div>Hello questions!</div>,
+  },
+  {
+    path: '/ask-question',
+    element: <div>Hello new question!</div>,
+  },
+]);
+
+
 function App() {
   return (
     <div className="App">
@@ -21,7 +38,7 @@ function App() {
 
         <div className="App-body">
           <div className="App-page">
-
+            <RouterProvider router={router}/>
           </div>
 
           <div className="App-sidebar">
