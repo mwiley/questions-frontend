@@ -6,28 +6,13 @@ import tokensIcon from './images/coins-solid.svg';
 import avatar from './images/avatar.png';
 import './App.css';
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <div>Hello questions!</div>,
-  },
-  {
-    path: '/ask-question',
-    element: <div>Hello new question!</div>,
-  },
-]);
-
+import { Outlet, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <nav className="App-nav">
-        <a href="#" className="button">Ask a question</a>
+        <Link to="/ask-question" className="button">Ask a question</Link>
       </nav>
 
       <div className="container">
@@ -38,7 +23,7 @@ function App() {
 
         <div className="App-body">
           <div className="App-page">
-            <RouterProvider router={router}/>
+            <Outlet/>
           </div>
 
           <div className="App-sidebar">
