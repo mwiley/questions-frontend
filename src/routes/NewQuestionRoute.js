@@ -4,7 +4,7 @@ import { useCreateQuestionMutation } from "../reducers/questionsApi";
 import './NewQuestionRoute.css';
 
 export default function NewQuestionRoute() {
-  const [createPost] = useCreateQuestionMutation();
+  const [createPost, {isLoading, isError}] = useCreateQuestionMutation();
   const navigate = useNavigate();
 
   const onSubmit = (e) => {
@@ -19,22 +19,28 @@ export default function NewQuestionRoute() {
       .then(() => navigate('/'));
   }
 
-  return (
-    <Card className="NewQuestionRoute">
-      <div className='NewQuestionRoute-header'>
-        <h2>New Question</h2>
-        <Link to="/" className="close-button">&#x2717;</Link>
-      </div>
-
-      <hr/>
-
-      <form onSubmit={onSubmit}>
-        <input type="text" name="title" placeholder="Enter the question title" required />
-        <textarea name="body" placeholder="Write your question here" rows="15" required />
-        <div className="NewQuestionRoute-buttons">
-          <input type="submit" className="button"/>
+  if (isLoading) {
+    return <p>Submitting new question...</p>
+  } else if (isError) {
+    return <p>Sorry, something went wrong! Please try again.</p>
+  } else {
+    return (
+      <Card className="NewQuestionRoute">
+        <div className='NewQuestionRoute-header'>
+          <h2>New Question</h2>
+          <Link to="/" className="close-button">&#x2717;</Link>
         </div>
-      </form>
-    </Card>
-  )
+  
+        <hr/>
+  
+        <form onSubmit={onSubmit}>
+          <input type="text" name="title" placeholder="Enter the question title" required />
+          <textarea name="body" placeholder="Write your question here" rows="15" required />
+          <div className="NewQuestionRoute-buttons">
+            <input type="submit" className="button"/>
+          </div>
+        </form>
+      </Card>
+    )
+  }
 }
