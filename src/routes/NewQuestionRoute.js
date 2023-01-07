@@ -8,7 +8,6 @@ export default function NewQuestionRoute() {
   const navigate = useNavigate();
 
   const onSubmit = (e) => {
-    console.log(e.target.elements)
     e.preventDefault();
     const {title, body} = e.target.elements;
     let formData = {
