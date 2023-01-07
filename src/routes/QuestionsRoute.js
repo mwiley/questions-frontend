@@ -21,9 +21,9 @@ export default function QuestionsRoute() {
         <p className="question-user-label">Asked by:</p>
 
         <div className="question-user">
-          <img className='question-user-avatar' alt={`Psuedo Near Expert's avatar`} src={avatar} width="50" height="50"/>
+          <img className='question-user-avatar' alt={`Pseudo Near Expert's avatar`} src={avatar} width="50" height="50"/>
           <div className="question-user-info">
-            <span className="question-user-name">Psuedo Near Expert</span>
+            <span className="question-user-name">Pseudo Near Expert</span>
             <span className="question-user-stats">2 Answers &middot; 1 question</span>
           </div>
         </div>

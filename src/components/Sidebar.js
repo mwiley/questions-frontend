@@ -32,7 +32,7 @@ const Sidebar = () => (
       <h2>Top Experts</h2>
 
       {
-        ['Psuedo Near Expert', 'Near Expert', 'Bitcoin Maxi', 'Ethereum Maxi'].map((name, index) => {
+        ['Pseudo Near Expert', 'Near Expert', 'Bitcoin Maxi', 'Ethereum Maxi'].map((name, index) => {
           return (
             <div className='user' key={index}>
               <img className='user-avatar' alt={`${name}'s avatar`} src={avatar} width="50" height="50"/>
